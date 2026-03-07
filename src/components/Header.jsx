@@ -1,13 +1,11 @@
 const Header = () => {
   return (
     <header className="header" id="header">
-      {/* Video Mobile */}
       <video className="header-video video-sm" autoPlay muted loop playsInline>
         <source src="/img/video-header-mobile.mp4" type="video/mp4" />
         Il tuo browser non supporta il video.
       </video>
-      
-      {/* Video Desktop */}
+
       <video className="header-video video-lg" autoPlay muted loop playsInline>
         <source src="/img/IMG_1830.MP4" type="video/mp4" />
         Il tuo browser non supporta il video.
@@ -28,9 +26,16 @@ const Header = () => {
           
           <p className="text-header z-index-1">Scopri la bellezza che ti rappresenta</p>
           
-          <div className="z-index-1 text-center">
-            <a className="btn btn-hero d-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 rounded"
-               href="#prenotazioni" title="Prenota Ora">
+          <div className="z-index-1 text-center mt-2">
+            <a 
+              className="btn btn-hero d-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 rounded"
+              href="#" 
+              title="Prenota Ora"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('prenotazioni')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
                Prenota ora
             </a>
           </div>

@@ -1,23 +1,19 @@
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'; // <--- Importa il footer
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import ProductDetail from './pages/ProductDetail';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
-
 function App() {
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="App d-flex flex-column min-vh-100">
-      <ScrollToTop />
+    <div className="d-flex flex-column min-vh-100">
       <Navbar />
       
       <div className="flex-grow-1">
@@ -28,7 +24,6 @@ function App() {
         </Routes>
       </div>
 
-      {/* Footer Component */}
       <Footer /> 
     </div>
   );

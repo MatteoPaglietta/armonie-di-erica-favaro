@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -8,17 +6,14 @@ const Footer = () => {
       <div className="container">
         <div className="row text-center text-md-start">
 
-          {/* Logo + frase */}
           <div className="col-md-4 mb-4 text-center">
             <h5 className="fw-bold">Armonie di Erica</h5>
             <p className="small">Dove il benessere incontra l’armonia del corpo e della mente.</p>
           </div>
-
-          {/* Link utili */}
           <div className="col-md-4 mb-4 text-center">
             <h6 className="text-uppercase fw-bold mb-3">Link utili</h6>
             <ul className="list-unstyled">
-              {/* Nota: usiamo /#section per assicurarci che porti alla home se siamo in una sottopagina */}
+
               <li><a href="/#homepage" className="text-decoration-none text-light">Home</a></li>
               <li><a href="/#pacchetti" className="text-decoration-none text-light">Pacchetti</a></li>
               <li><a href="/#prodotti" className="text-decoration-none text-light">Prodotti</a></li>
@@ -28,7 +23,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Orari e luogo */}
           <div className="col-md-4 mb-4 text-center">
             <h6 className="text-uppercase fw-bold mb-3">Orari di apertura</h6>
             <p className="mb-1">Mar - Gio - Ven: 9:00 - 18:00</p>
@@ -43,7 +37,6 @@ const Footer = () => {
         <hr className="border-top border-light" />
         
         <div className="row align-items-center">
-          {/* Social Icons */}
           <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end order-md-2">
             <div className="d-flex justify-content-center justify-content-md-start gap-3">
               <a href="https://wa.me/3925372152" target="_blank" rel="noopener noreferrer" className="text-light fs-4">
@@ -68,7 +61,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Copyright */}
           <div className="col-12 col-md-6 text-center text-md-start small mt-3 mt-md-0">
              © {currentYear} Armonie di Erica. Tutti i diritti riservati.
           </div>

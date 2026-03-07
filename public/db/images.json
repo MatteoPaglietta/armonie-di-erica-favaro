@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "image": "/img/immagine-erica.png",
+        "name": "Galleria 1"
+    },
+    {
+        "id": 2,
+        "image": "/img/immagine-header.jpg",
+        "name": "Galleria 2"
+    },
+    {
+        "id": 3,
+        "image": "/img/immagine-pacchetto-schiariture.png",
+        "name": "Galleria 3"
+    },
+    {
+        "id": 4,
+        "image": "/img/immagine-pacchetto-sposa.jpg",
+        "name": "Galleria 4"
+    },
+    {
+        "id": 5,
+        "image": "/img/immagine-sezione-prenotazione.jpg",
+        "name": "Galleria 5"
+    },
+    {
+        "id": 6,
+        "image": "/img/immagine-sonia.png",
+        "name": "Galleria 6"
+    },
+    {
+        "id": 7,
+        "image": "/img/immagine-vanessa.png",
+        "name": "Galleria 7"
+    },
+    {
+        "id": 8,
+        "image": "/img/immagine-erica.png",
+        "name": "Galleria 8"
+    },
+    {
+        "id": 9,
+        "image": "/img/immagine-header.jpg",
+        "name": "Galleria 9"
+    },
+    {
+        "id": 10,
+        "image": "/img/immagine-pacchetto-schiariture.png",
+        "name": "Galleria 10"
+    },
+    {
+        "id": 11,
+        "image": "/img/immagine-pacchetto-sposa.jpg",
+        "name": "Galleria 11"
+    },
+    {
+        "id": 12,
+        "image": "/img/immagine-sezione-prenotazione.jpg",
+        "name": "Galleria 12"
+    },
+    {
+        "id": 13,
+        "image": "/img/immagine-sonia.png",
+        "name": "Galleria 13"
+    },
+    {
+        "id": 14,
+        "image": "/img/immagine-vanessa.png",
+        "name": "Galleria 14"
+    },
+    {
+        "id": 15,
+        "image": "/img/immagine-erica.png",
+        "name": "Galleria 15"
+    },
+    {
+        "id": 16,
+        "image": "/img/immagine-header.jpg",
+        "name": "Galleria 16"
+    },
+    {
+        "id": 17,
+        "image": "/img/immagine-pacchetto-schiariture.png",
+        "name": "Galleria 17"
+    },
+    {
+        "id": 18,
+        "image": "/img/immagine-pacchetto-sposa.jpg",
+        "name": "Galleria 18"
+    },
+    {
+        "id": 19,
+        "image": "/img/immagine-sezione-prenotazione.jpg",
+        "name": "Galleria 19"
+    },
+    {
+        "id": 20,
+        "image": "/img/immagine-sonia.png",
+        "name": "Galleria 20"
+    }
+]
