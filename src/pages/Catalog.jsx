@@ -36,15 +36,16 @@ const Catalog = () => {
         </div>
 
         <h3 className="text-center fw-normal p-2 mb-4">
-          Scopri tutti i <span className="fst-italic fs-1">prodotti</span> presenti
-          in negozio, i <span className="fst-italic">prezzi </span> e le loro <span className="fst-italic">
-            funzioni</span>!
+          Scopri tutti i prodotti presenti in negozio, i prezzi e le loro caratteristiche!
         </h3>
 
         <div className="row gx-2 justify-content-around wrap-nowrap row-all-product mb-5">
           {!loading && !error && products.map((product) => (
             <div className="col-48 p-0" key={product.id}>
-              <div className="card" onClick={() => navigate(`/catalogo-prodotti/${product.id}`)}>
+              <div className="card" onClick={() => {
+                navigate(`/catalogo-prodotti/${product.id}`)
+                setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+              }}>
                 <img src={product.image} className="card-img-top" alt={product.name} />
                 <div className="card-body">
                   <div className="d-flex flex-column">

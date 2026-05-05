@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getProduct } from '../api/api';
 
 const ProductCarousel = () => {
@@ -67,6 +67,7 @@ const ProductCarousel = () => {
   }, [cardIndex]);
 
   const touchStart = useRef(0);
+  const wheelLocked = useRef(false);
   const handleTouchStart = (e) => { touchStart.current = e.touches[0].clientX; };
   const handleTouchEnd = (e) => {
     const touchEnd = e.changedTouches[0].clientX;
@@ -77,9 +78,26 @@ const ProductCarousel = () => {
     }
   };
 
+  const handleWheel = (e) => {
+    e.preventDefault();
+
+    if (wheelLocked.current) return;
+
+    const primaryDelta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    if (Math.abs(primaryDelta) < 10) return;
+
+    wheelLocked.current = true;
+    if (primaryDelta > 0) scrollNext();
+    else scrollPrev();
+
+    setTimeout(() => {
+      wheelLocked.current = false;
+    }, 300);
+  };
+
   return (
     <section className="mt-3" id="prodotti">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="carousel-container">
             <div 
@@ -87,12 +105,17 @@ const ProductCarousel = () => {
                 ref={scrollRef}
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
+                onWheel={handleWheel}
+                style={{ touchAction: 'pan-y' }}
             >
               <div className="carousel-track mb-3">
-                {!loading && !error && productsData.map((prod, index) => (
-                  <div key={prod.id} className={`col-9 col-md-5 col-lg-32 card-wrapper ps-3 ${index === 5 ? 'pe-4' : ''}`}>
-                    <div className="card" onClick={() => navigate(`/catalogo-prodotti/${prod.id}`)}>
-                      <img src={prod.img} className="card-img-top" alt={prod.name} />
+                {!loading && !error && productsData.map((prod) => (
+                  <div key={prod.id} className={`col-9 col-md-5 col-lg-32 card-wrapper ps-2 `}>
+                    <div className="card" onClick={() => {
+                      navigate(`/catalogo-prodotti/${prod.id}`),
+                      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+                      }}>
+                      <img src={prod.image} className="card-img-top" alt={prod.name} />
                       <div className="card-body">
                         <div className="d-flex">
                           <div className="col-7 d-flex flex-column justify-content-between">
@@ -101,8 +124,8 @@ const ProductCarousel = () => {
                               <span>{prod.category1}</span> <span>{prod.category2}</span>
                             </div>
                           </div>
-                          <div className="col-1 text-end"><div className="vr h-90"></div></div>
-                          <div className="col-4 price-scopri mt-2">
+                          <div className="col-1 d-flex justify-content-center align-items-center py-2"><div className="vr h-70"></div></div>
+                          <div className="col-4 d-flex flex-column price-scopri mt-2">
                             <p className="price main-price">{prod.price}</p>
                             <span className="order-link">Scopri ↗</span>
                           </div>

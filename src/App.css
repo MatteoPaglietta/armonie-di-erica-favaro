@@ -86,7 +86,6 @@ h1 .headingtext {
     background: linear-gradient(90deg, #ff93bc, #eea7c1);
     color: #272727;
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(228, 156, 182, 0.5);
     border: none;
 }
 
@@ -120,6 +119,11 @@ h1 .headingtext {
 
 
 /*NAVBAR*/
+.bg-light-navbar {
+    --bs-bg-opacity: 1;
+    background-color: #fff7fa !important;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -486,7 +490,6 @@ section {
     background-image: linear-gradient(#ffffff, #ffccdd 50%, #ffffff);
     width: 100%;
     padding-bottom: 50px;
-    padding-top: 2rem;
     position: relative;
 }
 
@@ -506,9 +509,10 @@ section {
 }
 
 /*PRODOTTI*/
-#prodotti .container-fluid{
+#prodotti .container-fluid {
     padding: 0 70px;
 }
+
 .price-scopri {
     text-align: right;
 }
@@ -578,7 +582,7 @@ section {
 
 .card .price {
     transition: color 0.3s ease;
-    font-size: 20.8px;
+    font-size: 19.9px;
     font-weight: 500;
     color: #232323;
     ;
@@ -727,15 +731,6 @@ section {
 .scroll-to-top.blocked,
 .scroll-to-top-products.blocked {
     position: absolute;
-}
-
-/*PRENOTAZIONE SECTION*/
-.bg-prenotazioni {
-    height: 300px;
-    background-image: url("/img/immagine-sezione-prenotazione.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 /*GALLERIA FOTO A SCORRIMENTO INFINITO*/
@@ -1136,6 +1131,10 @@ section {
         color: white;
     }
 
+    .nav-link-dark:hover::after {
+        width: 20%;
+    }
+
     #navbarNavAltMarkup {
         position: fixed !important;
         top: 44px;
@@ -1317,6 +1316,14 @@ section {
 
     .immagine-dettaglio {
         height: 500px;
+    }
+
+    .pacchetti {
+        margin: 0 7rem;
+    }
+
+    .mx-prenotazione {
+        margin: 0 8rem;
     }
 }
 

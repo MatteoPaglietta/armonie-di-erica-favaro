@@ -4,7 +4,7 @@
         "name": "Prodotto 1",
         "description": "Descrizione del prodotto 1",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli crespi",
         "category2" : "Brillantezza",
         "feature" : {
@@ -18,7 +18,7 @@
         "name": "Prodotto 2",
         "description": "Descrizione del prodotto 2",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli ricci",
         "category2" : "Balsamo",
         "feature" : {
@@ -32,7 +32,7 @@
         "name": "Prodotto 3",
         "description": "Descrizione del prodotto 3",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli lisci",
         "category2" : "Anti-crespo",
         "feature" : {
@@ -46,7 +46,7 @@
         "name": "Prodotto 4",
         "description": "Descrizione del prodotto 4",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli rovinati",
         "category2" : "Lisciante",
         "feature" : {
@@ -60,7 +60,7 @@
         "name": "Prodotto 5",
         "description": "Descrizione del prodotto 5",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli crespi",
         "category2" : "Anti-crespo",
         "feature" : {
@@ -74,7 +74,7 @@
         "name": "Prodotto 6",
         "description": "Descrizione del prodotto 6",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli lunghi",
         "category2" : "Tonalizzante",
         "feature" : {
@@ -88,7 +88,7 @@
         "name": "Prodotto 7",
         "description": "Descrizione del prodotto 7",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli mossi",
         "category2" : "Rinforzante",
         "feature" : {
@@ -102,7 +102,7 @@
         "name": "Prodotto 8",
         "description": "Descrizione del prodotto 8",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli lunghi",
         "category2" : "Anti-forfora",
         "feature" : {
@@ -116,7 +116,7 @@
         "name": "Prodotto 9",
         "description": "Descrizione del prodotto 9",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli mossi",
         "category2" : "Brillantezza",
         "feature" : {
@@ -130,7 +130,7 @@
         "name": "Prodotto 10",
         "description": "Descrizione del prodotto 10",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli ricci",
         "category2" : "Tonalizzante",
         "feature" : {
@@ -144,7 +144,7 @@
         "name": "Prodotto 11",
         "description": "Descrizione del prodotto 11",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli lunghi",
         "category2" : "Balsamo",
         "feature" : {
@@ -158,7 +158,7 @@
         "name": "Prodotto 12",
         "description": "Descrizione del prodotto 12",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli rovinati",
         "category2" : "Anti-crespo",
         "feature" : {
@@ -172,7 +172,7 @@
         "name": "Prodotto 13",
         "description": "Descrizione del prodotto 13",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli mossi",
         "category2" : "Rinforzante",
         "feature" : {
@@ -186,7 +186,7 @@
         "name": "Prodotto 14",
         "description": "Descrizione del prodotto 14",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli lunghi",
         "category2" : "Anti-forfora",
         "feature" : {
@@ -200,7 +200,7 @@
         "name": "Prodotto 15",
         "description": "Descrizione del prodotto 15",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli ricci",
         "category2" : "Brillantezza",
         "feature" : {
@@ -214,7 +214,7 @@
         "name": "Prodotto 16",
         "description": "Descrizione del prodotto 16",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Capelli crespi",
         "category2" : "Anti-forfora",
         "feature" : {
@@ -228,7 +228,7 @@
         "name": "Prodotto 17",
         "description": "Descrizione del prodotto 17",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -242,7 +242,7 @@
         "name": "Prodotto 18",
         "description": "Descrizione del prodotto 18 ",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -256,7 +256,7 @@
         "name": "Prodotto 19",
         "description": "Descrizione del prodotto 19",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -270,7 +270,7 @@
         "name": "Prodotto 20",
         "description": "Descrizione del prodotto 20",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -284,7 +284,7 @@
         "name": "Prodotto 21",
         "description": "Descrizione del prodotto 21",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -298,7 +298,7 @@
         "name": "Prodotto 22",
         "description": "Descrizione del prodotto 22",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -312,7 +312,7 @@
         "name": "Prodotto 23",
         "description": "Descrizione del prodotto 23",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -326,7 +326,7 @@
         "name": "Prodotto 24",
         "description": "Descrizione del prodotto 24",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -340,7 +340,7 @@
         "name": "Prodotto 25",
         "description": "Descrizione del prodotto 25",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -354,7 +354,7 @@
         "name": "Prodotto 26",
         "description": "Descrizione del prodotto 26",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -368,7 +368,7 @@
         "name": "Prodotto 27",
         "description": "Descrizione del prodotto 27",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -382,7 +382,7 @@
         "name": "Prodotto 28",
         "description": "Descrizione del prodotto 28",
         "price": "19.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -396,7 +396,7 @@
         "name": "Prodotto 29",
         "description": "Descrizione del prodotto 29",
         "price": "29.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {
@@ -410,7 +410,7 @@
         "name": "Prodotto 30",
         "description": "Descrizione del prodotto 30",
         "price": "39.99 €",
-        "image": "https://via.placeholder.com/150",
+        "image": "/img/prodotto.png",
         "category1" : "Categoria 1",
         "category2" : "Categoria 2",
         "feature" : {

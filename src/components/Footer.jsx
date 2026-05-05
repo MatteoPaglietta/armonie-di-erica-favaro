@@ -18,7 +18,6 @@ const Footer = () => {
               <li><a href="/#pacchetti" className="text-decoration-none text-light">Pacchetti</a></li>
               <li><a href="/#prodotti" className="text-decoration-none text-light">Prodotti</a></li>
               <li><a href="/#galleria" className="text-decoration-none text-light">Galleria</a></li>
-              <li><a href="/#team" className="text-decoration-none text-light">Team</a></li>
               <li><a href="/#prenotazioni" className="text-decoration-none text-light">Prenotazioni</a></li>
             </ul>
           </div>

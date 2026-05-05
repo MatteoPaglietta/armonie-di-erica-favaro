@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const isNavbarWhite = scrolled || !isHomePage || isOpen;
 
-  const navbarClasses = `navbar fixed-top navbar-expand-lg transition-all duration-300 ${isNavbarWhite ? 'bg-white navbar-light shadow-sm' : 'bg-transparent navbar-dark'
+  const navbarClasses = `navbar fixed-top navbar-expand-lg transition-all duration-300 ${isNavbarWhite ? 'bg-light-navbar navbar-light' : 'bg-transparent navbar-dark'
     }`;
 
   const navLinkClass = isNavbarWhite ? 'nav-link-dark text-black' : 'nav-link-light text-white';
@@ -39,14 +39,17 @@ const Navbar = () => {
 
   return (
     <nav className={navbarClasses} style={{ height: '60px', transition: 'all 0.3s ease' }}>
-      <div className="container-fluid h-100 align-items-center justify-content-center">
+      <div className={`container-fluid h-100 align-items-center ${isCatalogPage ? "justify-content-center" : "justify-content-between"}`}>
         <Link
-          className={`navbar-brand mx-auto ${brandClass}`}
+          className={`navbar-brand ${brandClass}`}
           to="/"
-          style={{ fontFamily: '"Buenard", serif', fontSize: '1.7rem' }}
+          style={{ fontFamily: '"Buenard", serif', fontSize: '1.7rem', color: '#a0254e'}}
           onClick={handleBrandClick}
         >
-          Armonie di Erica
+          <text style={{color : isNavbarWhite ? "#a0254e" : "#131313"}}>
+            ARMONIE DI ERICA
+          </text>
+
         </Link>
         {!isCatalogPage && (
           <>
@@ -82,14 +85,13 @@ const Navbar = () => {
                 right: 0,
                 maxHeight: isOpen ? 'calc(100vh - 60px)' : 'auto',
                 overflowY: isOpen ? 'auto' : 'visible',
-                backgroundColor: isOpen ? 'white' : 'transparent',
+                backgroundColor: isOpen ? '#fff7fa' : 'transparent',
                 zIndex: 1000
               }}
             >
               <div className="navbar-nav ms-auto text-center">
                 <a
-                  className={`nav-link ${navLinkClass}`}
-                  href="#"
+                  className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -99,8 +101,7 @@ const Navbar = () => {
                   Home
                 </a>
                 <a
-                  className={`nav-link ${navLinkClass}`}
-                  href="#"
+                  className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('pacchetti')?.scrollIntoView({ behavior: 'smooth' });
@@ -110,8 +111,7 @@ const Navbar = () => {
                   Pacchetti
                 </a>
                 <a
-                  className={`nav-link ${navLinkClass}`}
-                  href="#"
+                  className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('prodotti')?.scrollIntoView({ behavior: 'smooth' });
@@ -121,8 +121,7 @@ const Navbar = () => {
                   Prodotti
                 </a>
                 <a
-                  className={`nav-link ${navLinkClass}`}
-                  href="#"
+                  className={`nav-link ps-0 ps-md-2 mb-2 mb-lg-0 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('galleria')?.scrollIntoView({ behavior: 'smooth' });
@@ -132,30 +131,7 @@ const Navbar = () => {
                   Galleria
                 </a>
                 <a
-                  className={`nav-link ${navLinkClass}`}
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' });
-                    closeMenu();
-                  }}
-                >
-                  Team
-                </a>
-                <a
-                  className={`navLink ${navLinkClass} d-lg-none`}
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('prenotazioni')?.scrollIntoView({ behavior: 'smooth' });
-                    closeMenu();
-                  }}
-                >
-                  Prenotazioni
-                </a>
-                <a
-                  className="btn btn-hero d-none d-lg-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 ms-2 rounded"
-                  href="#"
+                  className="btn btn-hero d-lg-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 ms-2 rounded"
                   title="Prenota Ora"
                   onClick={(e) => {
                     e.preventDefault();
