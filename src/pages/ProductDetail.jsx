@@ -67,7 +67,12 @@ const ProductDetail = () => {
               src={pById.image} 
               alt={pById.name}
               className="card-img-top rounded shadow-sm immagine-dettaglio"
-              style={{ objectFit: 'contain', maxHeight: '500px' }} 
+              style={{
+                height: '500px',
+                width: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center',
+              }} 
             />
           </div>
           <div className="col-md-6">
@@ -113,7 +118,16 @@ const ProductDetail = () => {
                 }}
                 style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
               >
-                <img src={rel.image} className="card-img-top" alt={rel.name} style={{height: "200px"}} />
+                <img
+                  src={rel.image}
+                  className="card-img-top"
+                  alt={rel.name}
+                  style={{
+                    height: '250px',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                  }}
+                />
                 <div className="card-body">
                   <div className="d-flex flex-column">
                     <div className="col-12">

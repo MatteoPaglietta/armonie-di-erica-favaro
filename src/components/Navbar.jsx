@@ -46,7 +46,7 @@ const Navbar = () => {
           style={{ fontFamily: '"Buenard", serif', fontSize: '1.7rem', color: '#a0254e'}}
           onClick={handleBrandClick}
         >
-          <text style={{color : isNavbarWhite ? "#a0254e" : "#131313"}}>
+          <text style={{color : isNavbarWhite ? "#a0254e" : "#fff"}}>
             ARMONIE DI ERICA
           </text>
 

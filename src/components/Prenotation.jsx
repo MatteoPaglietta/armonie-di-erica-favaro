@@ -3,8 +3,8 @@ function Prenotation() {
         <section className="my-5" id="prenotazioni">
             <div className="container">
                 <div className="row mx-prenotazione">
-                    <div className="col-12 col-md-6">
-                        <img src="/img/immagine-sezione-prenotazione.jpg" alt="Salone Armonie di Erica" className="rounded" style={{ height: "300px", width: "100%" }} />
+                    <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="/img/immagine-sezione-prenotazione.jpg" alt="Salone Armonie di Erica" className="rounded" style={{ height: "300px", width: "100%", maxWidth: "100%", objectFit: "cover" }} />
                     </div>
                     <div className="col-12 col-md-6 text-center pt-4 pt-md-0">
                         <h3 className="title-text">Il tuo nuovo look ti aspetta! Prenota ora</h3>
