@@ -7,7 +7,7 @@ const Header = () => {
       </video>
 
       <video className="header-video video-lg" autoPlay muted loop playsInline>
-        <source src="/img/IMG_1830.MP4" type="video/mp4" />
+        <source src="/img/IMG_1830.mp4" type="video/mp4" />
         Il tuo browser non supporta il video.
       </video>
 

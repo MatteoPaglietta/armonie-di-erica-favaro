@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ScrollToTop from '../components/ScrollToTop';
+import SectionLoader from '../components/SectionLoader';
 import { getProduct } from '../api/api';
 
 const Catalog = () => {
@@ -107,6 +108,9 @@ const Catalog = () => {
         <h3 className="text-center fw-normal p-2 mb-4">
           Scopri tutti i prodotti presenti in negozio, i prezzi e le loro caratteristiche!
         </h3>
+
+        {loading && <SectionLoader label="Caricamento prodotti..." />}
+        {!loading && error && <div className="section-error text-center mb-4">{error}</div>}
 
         <div className="row gx-4 gy-3 row-all-product mb-4">
           {!loading && !error && productsWithPlaceholders.map((product) => (

@@ -117,6 +117,31 @@ h1 .headingtext {
     overflow: visible;
 }
 
+.section-loader {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    color: #830932;
+}
+
+.section-loader .spinner-border {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-width: 0.2rem;
+}
+
+.section-loader-text {
+    font-weight: 500;
+}
+
+.section-error {
+    color: #b3261e;
+    font-weight: 500;
+}
+
 
 /*NAVBAR*/
 .bg-light-navbar {
@@ -352,9 +377,14 @@ h1 .headingtext {
     height: 100%;
     object-fit: cover;
     opacity: 0.6;
-    animation: videoFadeIn linear forwards;
-    animation-timeline: scroll(root);
-    animation-range: 0% 50vh;
+}
+
+@supports (animation-timeline: scroll()) {
+    .header-video {
+        animation: videoFadeIn linear forwards;
+        animation-timeline: scroll(root);
+        animation-range: 0% 50vh;
+    }
 }
 
 .header figure {
@@ -370,7 +400,7 @@ h1 .headingtext {
 .header .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.25);
 }
 
 .header .hero-titles {

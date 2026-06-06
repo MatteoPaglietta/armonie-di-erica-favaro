@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getProduct } from '../api/api';
+import SectionLoader from '../components/SectionLoader';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -46,9 +47,6 @@ const ProductDetail = () => {
     loadProducts();
   }, [id]);
 
-  {loading && !error && <div className="text-center mt-5 pt-5">Caricamento...</div>;}
-  {!loading && error && <div className="text-center mt-5 pt-5 text-danger">{error}</div>;}
-
   return(
     <section className="product-detail animate-fade-in" style={{ paddingTop: '80px' }}>
       <div className="container">
@@ -60,6 +58,13 @@ const ProductDetail = () => {
           <i className="bi bi-arrow-left me-2" style={{ fontSize: '1.2rem' }}></i>
           <span>Torna al Catalogo</span>
         </div>
+
+        {loading && <SectionLoader label="Caricamento dettaglio prodotto..." />}
+        {!loading && error && <div className="section-error text-center mb-4">{error}</div>}
+        {!loading && !error && productById.length === 0 && (
+          <div className="section-error text-center mb-4">Prodotto non trovato.</div>
+        )}
+
         {!loading && !error && productById.map((pById) => (
         <div className="row" key={pById.id}>
           <div className="col-md-6 mb-4 img-dettaglio">
@@ -105,49 +110,53 @@ const ProductDetail = () => {
         </div>
         ))}
 
-        <hr className="my-5" />
-        <h3 className="mb-4 text-center">Prodotti Correlati</h3>
-        <div className="row row-cols-1 row-cols-md-3 g-4 mb-5">
-          {related.map((rel) => (
-            <div className="col" key={rel.id}>
-              <div 
-                className="card col-48 h-100 shadow-sm border-0" 
-                onClick={() => {
-                  navigate(`/catalogo-prodotti/${rel.id}`);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
-              >
-                <img
-                  src={rel.image}
-                  className="card-img-top"
-                  alt={rel.name}
-                  style={{
-                    height: '250px',
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                  }}
-                />
-                <div className="card-body">
-                  <div className="d-flex flex-column">
-                    <div className="col-12">
-                      <h4 className="card-title">{rel.name}</h4>
-                      <div className="tags mb-2">
-                        <span>{rel.category1}</span>
-                        <span>{rel.category2}</span>
+        {!loading && !error && productById.length > 0 && (
+          <>
+            <hr className="my-5" />
+            <h3 className="mb-4 text-center">Prodotti Correlati</h3>
+            <div className="row row-cols-1 row-cols-md-3 g-4 mb-5">
+              {related.map((rel) => (
+                <div className="col" key={rel.id}>
+                  <div 
+                    className="card col-48 h-100 shadow-sm border-0" 
+                    onClick={() => {
+                      navigate(`/catalogo-prodotti/${rel.id}`);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
+                  >
+                    <img
+                      src={rel.image}
+                      className="card-img-top"
+                      alt={rel.name}
+                      style={{
+                        height: '250px',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                      }}
+                    />
+                    <div className="card-body">
+                      <div className="d-flex flex-column">
+                        <div className="col-12">
+                          <h4 className="card-title">{rel.name}</h4>
+                          <div className="tags mb-2">
+                            <span>{rel.category1}</span>
+                            <span>{rel.category2}</span>
+                          </div>
+                        </div>
+                        <hr />
+                        <div className="col-12 d-flex justify-content-between price-order">
+                          <p className="price">{rel.price}</p>
+                          <span className="order-link">Scopri ↗</span>
+                        </div>
                       </div>
-                    </div>
-                    <hr />
-                    <div className="col-12 d-flex justify-content-between price-order">
-                      <p className="price">{rel.price}</p>
-                      <span className="order-link">Scopri ↗</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        )}
 
       </div>
     </section>

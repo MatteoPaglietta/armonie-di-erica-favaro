@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getProduct } from '../api/api';
+import SectionLoader from './SectionLoader';
 
 const ProductCarousel = () => {
   const [productsData, setProductsData] = useState([]);
@@ -108,6 +109,8 @@ const ProductCarousel = () => {
                 onWheel={handleWheel}
                 style={{ touchAction: 'pan-y' }}
             >
+              {loading && <SectionLoader label="Caricamento prodotti..." />}
+              {!loading && error && <div className="section-error text-center mb-4">{error}</div>}
               <div className="carousel-track mb-3">
                 {!loading && !error && productsData.map((prod) => (
                   <div key={prod.id} className={`col-9 col-md-5 col-lg-32 card-wrapper ps-2 `}>
@@ -137,25 +140,29 @@ const ProductCarousel = () => {
               </div>
             </div>
 
-            <div className="carousel-controls align-items-baseline">
-              <button className="carousel-btn prev" onClick={scrollPrev} disabled={cardIndex === 0}>‹</button>
-              <span className="carousel-page">{currentPage} / {totalPages}</span>
-              <button className="carousel-btn next" onClick={scrollNext} disabled={cardIndex === maxIndex}>›</button>
-            </div>
+            {!loading && !error && productsData.length > 0 && (
+              <div className="carousel-controls align-items-baseline">
+                <button className="carousel-btn prev" onClick={scrollPrev} disabled={cardIndex === 0}>‹</button>
+                <span className="carousel-page">{currentPage} / {totalPages}</span>
+                <button className="carousel-btn next" onClick={scrollNext} disabled={cardIndex === maxIndex}>›</button>
+              </div>
+            )}
 
-            <div className="carousel-cta text-center">
-               <a
-                 href="/catalogo-prodotti"
-                 className="link-see-all"
-                 onClick={e => {
-                   e.preventDefault();
-                   navigate('/catalogo-prodotti');
-                   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
-                 }}
-               >
-                 Vedi tutti i prodotti
-               </a>
-            </div>
+            {!loading && !error && productsData.length > 0 && (
+              <div className="carousel-cta text-center">
+                 <a
+                   href="/catalogo-prodotti"
+                   className="link-see-all"
+                   onClick={e => {
+                     e.preventDefault();
+                     navigate('/catalogo-prodotti');
+                     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+                   }}
+                 >
+                   Vedi tutti i prodotti
+                 </a>
+              </div>
+            )}
           </div>
         </div>
       </div>
