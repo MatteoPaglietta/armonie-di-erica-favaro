@@ -4,65 +4,77 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-light pt-5 pb-4 mt-auto" id="footer">
       <div className="container">
-        <div className="row text-center text-md-start">
+        <div className="row text-center text-lg-start gy-4">
 
-          <div className="col-md-4 mb-4 text-center">
-            <h5 className="fw-bold">Armonie di Erica</h5>
-            <p className="small">Dove il benessere incontra l’armonia del corpo e della mente.</p>
-          </div>
-          <div className="col-md-4 mb-4 text-center">
-            <h6 className="text-uppercase fw-bold mb-3">Link utili</h6>
-            <ul className="list-unstyled">
-
-              <li><a href="/#homepage" className="text-decoration-none text-light">Home</a></li>
-              <li><a href="/#pacchetti" className="text-decoration-none text-light">Pacchetti</a></li>
-              <li><a href="/#prodotti" className="text-decoration-none text-light">Prodotti</a></li>
-              <li><a href="/#galleria" className="text-decoration-none text-light">Galleria</a></li>
-              <li><a href="/#prenotazioni" className="text-decoration-none text-light">Prenotazioni</a></li>
-            </ul>
-          </div>
-
-          <div className="col-md-4 mb-4 text-center">
-            <h6 className="text-uppercase fw-bold mb-3">Orari di apertura</h6>
-            <p className="mb-1">Mar - Gio - Ven: 9:00 - 18:00</p>
-            <p className="mb-1">Mercoledì: 15:00 - 21:00</p>
-            <p className="mb-1">Sabato: 9:00 - 16:00</p>
-            <p className="mb-3">Domenica e Lunedì: Chiuso</p>
-            <p><i className="bi bi-geo-alt-fill me-2"></i>Via Umberto I 7, Piscina (To)</p>
-          </div>
-
-        </div>
-
-        <hr className="border-top border-light" />
-        
-        <div className="row align-items-center">
-          <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end order-md-2">
-            <div className="d-flex justify-content-center justify-content-md-start gap-3">
-              <a href="https://wa.me/3925372152" target="_blank" rel="noopener noreferrer" className="text-light fs-4">
-                <i className="bi bi-whatsapp" title="Contattaci su Whatsapp"></i>
+          <div className="col-12 col-lg-3" data-aos="fade-up">
+            <h5 className="fw-bold mb-3">Armonie di Erica</h5>
+            <p className="small mb-3">Dove il benessere incontra l’armonia... e i tuoi capelli prendono vita</p>
+            <div className="d-flex justify-content-center justify-content-lg-start gap-3">
+              <a href="https://wa.me/3925372152" target="_blank" rel="noopener noreferrer" className="text-light fs-5" title="Contattaci su Whatsapp">
+                <i className="bi bi-whatsapp"></i>
                 <span className="visually-hidden">Whatsapp</span>
               </a>
-
-              <a href="https://instagram.com/armonie_di_erica_" target="_blank" rel="noopener noreferrer" className="text-light fs-4">
-                <i className="bi bi-instagram" title="Seguici su Instagram"></i>
+              <a href="https://instagram.com/armonie_di_erica_" target="_blank" rel="noopener noreferrer" className="text-light fs-5" title="Seguici su Instagram">
+                <i className="bi bi-instagram"></i>
                 <span className="visually-hidden">Instagram</span>
               </a>
-
-              <a href="https://facebook.com/share/19LtJ4aRER/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-light fs-4" title="Seguici su Facebook">
+              <a href="https://facebook.com/share/19LtJ4aRER/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-light fs-5" title="Seguici su Facebook">
                 <i className="bi bi-facebook"></i>
                 <span className="visually-hidden">Facebook</span>
-              </a>
-
-              <a href="mailto:armoniediericafavaro@gmail.com" rel="noopener noreferrer" title="Scrivici alla mail" className="text-light me-3 fs-4">
-                <i className="bi bi-envelope-fill"></i>
-                <span className="visually-hidden">Email</span>
               </a>
             </div>
           </div>
 
-          <div className="col-12 col-md-6 text-center text-md-start small mt-3 mt-md-0">
-             © {currentYear} Armonie di Erica. Tutti i diritti riservati.
+          <div className="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <h6 className="text-uppercase fw-bold mb-3">Link utili</h6>
+            <ul className="list-unstyled mb-0">
+              <li className="mb-2"><a href="/#homepage" className="text-decoration-none text-light">Home</a></li>
+              <li className="mb-2"><a href="/#pacchetti" className="text-decoration-none text-light">Pacchetti</a></li>
+              {/* <li className="mb-2"><a href="/#prodotti" className="text-decoration-none text-light">Prodotti</a></li> */}
+              <li className="mb-2"><a href="/#galleria" className="text-decoration-none text-light">Galleria</a></li>
+              <li><a href="/#prenotazioni" className="text-decoration-none text-light">Prenotazioni</a></li>
+            </ul>
           </div>
+
+          <div className="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <h6 className="text-uppercase fw-bold mb-3">Orari</h6>
+            <p className="mb-1 small">Mar - Gio - Ven: 9:00 - 18:00</p>
+            <p className="mb-1 small">Mercoledì: 14:00 - 20:00</p>
+            <p className="mb-1 small">Sabato: 9:00 - 16:00</p>
+            <p className="mb-0 small">Dom e Lun: chiuso</p>
+          </div>
+
+          <div className="col-12 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <h6 className="text-uppercase fw-bold mb-3">Contatti</h6>
+            <p className="mb-2">
+              <i className="bi bi-geo-alt-fill me-2"></i>Via Umberto I 7, Piscina (To)
+            </p>
+            <p className="mb-2">
+              <a href="tel:+393925372152" className="text-decoration-none text-light">
+                <i className="bi bi-telephone-fill me-2"></i>392 537 2152
+              </a>
+            </p>
+            <p className="mb-0">
+              <a href="mailto:armoniediericafavaro@gmail.com" className="text-decoration-none text-light">
+                <i className="bi bi-envelope-fill me-2"></i>armoniediericafavaro@gmail.com
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+        <hr className="border-top border-light my-4" />
+
+        <div className="text-center small">
+          © {currentYear} Armonie di Erica. Tutti i diritti riservati.
+          {' '}
+          <a
+            href="https://www.iubenda.com/privacy-policy/89680577"
+            className="iubenda-noiframe iubenda-embed iubenda-nostyle link-privacy"
+            title="Privacy Policy"
+          >
+            Privacy Policy
+          </a>
         </div>
       </div>
     </footer>

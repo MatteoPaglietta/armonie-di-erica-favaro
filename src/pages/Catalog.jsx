@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ScrollToTop from '../components/ScrollToTop';
-import SectionLoader from '../components/SectionLoader';
+import { ProductCardSkeleton } from '../components/Skeleton';
 import { getProduct } from '../api/api';
 
 const Catalog = () => {
@@ -109,15 +109,19 @@ const Catalog = () => {
           Scopri tutti i prodotti presenti in negozio, i prezzi e le loro caratteristiche!
         </h3>
 
-        {loading && <SectionLoader label="Caricamento prodotti..." />}
         {!loading && error && <div className="section-error text-center mb-4">{error}</div>}
 
         <div className="row gx-4 gy-3 row-all-product mb-4">
+          {loading && Array.from({ length: productsPerPage }).map((_, index) => (
+            <div className="col-48 p-0" key={index}>
+              <ProductCardSkeleton />
+            </div>
+          ))}
           {!loading && !error && productsWithPlaceholders.map((product) => (
             product.isPlaceholder ? (
               <div className="col-48 p-0 catalog-placeholder-slot" key={product.id} aria-hidden="true"></div>
             ) : (
-              <div className="col-48 p-0" key={product.id}>
+              <div className="col-48 p-0" key={product.id} data-aos="fade-up">
                 <div className="card" onClick={() => {
                   navigate(`/catalogo-prodotti/${product.id}`)
                   setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);

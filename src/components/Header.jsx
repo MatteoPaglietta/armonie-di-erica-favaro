@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container">
         <div className="row">
           <div className="overlay"></div>
-          <figure>
+          <figure data-aos="fade-down" data-aos-delay="100">
             <picture>
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 -10 400 45" preserveAspectRatio="xMidYMid meet">
                 <text x="50%" y="75%" textAnchor="middle" fontFamily="Buenard, serif" fontSize="64" fontWeight="700" letterSpacing="4" fill="#ffffff">
@@ -23,13 +23,13 @@ const Header = () => {
               </svg>
             </picture>
           </figure>
-          
-          <p className="text-header z-index-1">Scopri la bellezza che ti rappresenta</p>
-          
-          <div className="z-index-1 text-center mt-2">
-            <a 
+
+          <p className="text-header z-index-1" data-aos="fade-up" data-aos-delay="250">Scopri la bellezza che ti rappresenta</p>
+
+          <div className="z-index-1 text-center mt-2" data-aos="fade-up" data-aos-delay="400">
+            <a
               className="btn btn-hero d-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 rounded"
-              href="#" 
+              href="#"
               title="Prenota Ora"
               onClick={(e) => {
                 e.preventDefault();

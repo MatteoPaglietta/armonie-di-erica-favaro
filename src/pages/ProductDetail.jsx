@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getProduct } from '../api/api';
-import SectionLoader from '../components/SectionLoader';
+import Skeleton from '../components/Skeleton';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -59,17 +59,31 @@ const ProductDetail = () => {
           <span>Torna al Catalogo</span>
         </div>
 
-        {loading && <SectionLoader label="Caricamento dettaglio prodotto..." />}
         {!loading && error && <div className="section-error text-center mb-4">{error}</div>}
         {!loading && !error && productById.length === 0 && (
           <div className="section-error text-center mb-4">Prodotto non trovato.</div>
         )}
 
+        {loading && (
+          <div className="row">
+            <div className="col-md-6 mb-4">
+              <Skeleton style={{ height: 500, width: '100%', borderRadius: 8 }} />
+            </div>
+            <div className="col-md-6">
+              <Skeleton style={{ height: 36, width: '80%', marginBottom: '1rem' }} />
+              <Skeleton style={{ height: 24, width: '40%', marginBottom: '1.5rem' }} />
+              <Skeleton style={{ height: 16, width: '100%', marginBottom: '0.5rem' }} />
+              <Skeleton style={{ height: 16, width: '95%', marginBottom: '0.5rem' }} />
+              <Skeleton style={{ height: 16, width: '85%' }} />
+            </div>
+          </div>
+        )}
+
         {!loading && !error && productById.map((pById) => (
         <div className="row" key={pById.id}>
-          <div className="col-md-6 mb-4 img-dettaglio">
-            <img 
-              src={pById.image} 
+          <div className="col-md-6 mb-4 img-dettaglio" data-aos="fade-right">
+            <img
+              src={pById.image}
               alt={pById.name}
               className="card-img-top rounded shadow-sm immagine-dettaglio"
               style={{
@@ -77,10 +91,10 @@ const ProductDetail = () => {
                 width: '100%',
                 objectFit: 'cover',
                 objectPosition: 'center',
-              }} 
+              }}
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6" data-aos="fade-left">
             <h1 className="display-5 fw-bold mb-3">{pById.name}</h1>
             <h3 className="mb-4 color-logo">{pById.price}</h3>
 
@@ -116,7 +130,7 @@ const ProductDetail = () => {
             <h3 className="mb-4 text-center">Prodotti Correlati</h3>
             <div className="row row-cols-1 row-cols-md-3 g-4 mb-5">
               {related.map((rel) => (
-                <div className="col" key={rel.id}>
+                <div className="col" key={rel.id} data-aos="fade-up">
                   <div 
                     className="card col-48 h-100 shadow-sm border-0" 
                     onClick={() => {

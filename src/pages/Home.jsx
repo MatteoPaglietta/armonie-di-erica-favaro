@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import ProductCarousel from '../components/ProductCarousel';
+// import ProductCarousel from '../components/ProductCarousel';
 import PhotoGallery from '../components/PhotoGallery';
 import Introduction from '../components/Introduction';
 import Packages from '../components/Packages';
@@ -13,7 +13,7 @@ const Home = () => {
             <Header />
             <Introduction />
             <Packages />
-            <ProductCarousel />
+            {/* <ProductCarousel /> */}
             <PhotoGallery />
             {/* <Team /> */}
             <Prenotation />

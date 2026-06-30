@@ -32,8 +32,17 @@ const Navbar = () => {
 
   const closeMenu = () => setIsOpen(false);
   const isCatalogPage = location.pathname.startsWith('/catalogo-prodotti');
-  const handleBrandClick = () => {
+
+  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToId = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleBrandClick = () => {
+    scrollToTop();
     closeMenu();
   };
 
@@ -46,9 +55,9 @@ const Navbar = () => {
           style={{ fontFamily: '"Buenard", serif', fontSize: '1.7rem', color: '#a0254e'}}
           onClick={handleBrandClick}
         >
-          <text style={{color : isNavbarWhite ? "#a0254e" : "#fff"}}>
+          <span style={{color : isNavbarWhite ? "#a0254e" : "#fff"}}>
             ARMONIE DI ERICA
-          </text>
+          </span>
 
         </Link>
         {!isCatalogPage && (
@@ -94,7 +103,7 @@ const Navbar = () => {
                   className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    scrollToTop();
                     closeMenu();
                   }}
                 >
@@ -104,13 +113,13 @@ const Navbar = () => {
                   className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('pacchetti')?.scrollIntoView({ behavior: 'smooth' });
+                    scrollToId('pacchetti');
                     closeMenu();
                   }}
                 >
                   Pacchetti
                 </a>
-                <a
+                {/* <a
                   className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
@@ -119,12 +128,12 @@ const Navbar = () => {
                   }}
                 >
                   Prodotti
-                </a>
+                </a> */}
                 <a
                   className={`nav-link ps-0 ps-md-2 mb-2 mb-lg-0 ${navLinkClass}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('galleria')?.scrollIntoView({ behavior: 'smooth' });
+                    scrollToId('galleria');
                     closeMenu();
                   }}
                 >
@@ -135,7 +144,7 @@ const Navbar = () => {
                   title="Prenota Ora"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('prenotazioni')?.scrollIntoView({ behavior: 'smooth' });
+                    scrollToId('prenotazioni');
                     closeMenu();
                   }}
                 >

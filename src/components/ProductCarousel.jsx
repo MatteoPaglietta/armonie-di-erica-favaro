@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getProduct } from '../api/api';
-import SectionLoader from './SectionLoader';
+import { ProductCardSkeleton } from './Skeleton';
 
 const ProductCarousel = () => {
   const [productsData, setProductsData] = useState([]);
@@ -97,7 +97,7 @@ const ProductCarousel = () => {
   };
 
   return (
-    <section className="mt-3" id="prodotti">
+    <section className="mt-3" id="prodotti" data-aos="fade-up">
       <div className="container">
         <div className="row">
           <div className="carousel-container">
@@ -109,9 +109,13 @@ const ProductCarousel = () => {
                 onWheel={handleWheel}
                 style={{ touchAction: 'pan-y' }}
             >
-              {loading && <SectionLoader label="Caricamento prodotti..." />}
               {!loading && error && <div className="section-error text-center mb-4">{error}</div>}
               <div className="carousel-track mb-3">
+                {loading && Array.from({ length: 6 }).map((_, index) => (
+                  <div key={index} className="col-9 col-md-5 col-lg-32 card-wrapper ps-2">
+                    <ProductCardSkeleton />
+                  </div>
+                ))}
                 {!loading && !error && productsData.map((prod) => (
                   <div key={prod.id} className={`col-9 col-md-5 col-lg-32 card-wrapper ps-2 `}>
                     <div className="card" onClick={() => {
