@@ -5,7 +5,7 @@ function Introduction() {
                 <h1 className="text-center testo-main" data-aos="fade-up">Armonie di Erica salone di bellezza al passo con il tuo stile</h1>
                 <h2 className="text-center text-main-content" data-aos="fade-up" data-aos-delay="100">Specialisti nelle schiariture naturali e cura del benessere delle nostre clienti, con uno stile moderno e personalizzato</h2>
 
-                <div className="features-section container mt-4">
+                <div className="features-section container mt-4 pb-0 pb-md-3">
                     <div className="row justify-content-center g-4">
                         <div className="col-12 col-md-4">
                             <div className="feature" data-aos="fade-up" data-aos-delay="0">
@@ -31,7 +31,7 @@ function Introduction() {
                     </div>
                 </div>
 
-                <p className="text-center text-main-content mt-4 fs-3" data-aos="fade-up">
+                <p className="text-center text-main-content mt-0 mt-md-4 mb-5 mb-md-0 fs-3" data-aos="fade-up">
                     Da anni nel cuore di Piscina, in via Umberto I, accompagniamo le nostre clienti in un percorso di bellezza su misura: dalla consulenza iniziale alla scelta della tecnica più adatta, fino alla cura quotidiana dei capelli dopo il trattamento.
                 </p>
             </div>

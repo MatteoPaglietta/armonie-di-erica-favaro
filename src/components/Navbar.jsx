@@ -1,24 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const tickingRef = useRef(false);
 
   const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      if (tickingRef.current) return;
+      tickingRef.current = true;
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 50);
+        tickingRef.current = false;
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -52,6 +53,7 @@ const Navbar = () => {
         <Link
           className={`navbar-brand ${brandClass}`}
           to="/"
+          title="Armonie di Erica - Torna alla home"
           style={{ fontFamily: '"Buenard", serif', fontSize: '1.7rem', color: '#a0254e'}}
           onClick={handleBrandClick}
         >
@@ -101,6 +103,8 @@ const Navbar = () => {
               <div className="navbar-nav ms-auto text-center">
                 <a
                   className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
+                  href="#home"
+                  title="Vai alla home"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToTop();
@@ -111,6 +115,8 @@ const Navbar = () => {
                 </a>
                 <a
                   className={`nav-link ps-0 ps-md-2 ${navLinkClass}`}
+                  href="#pacchetti"
+                  title="Vai ai pacchetti"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToId('pacchetti');
@@ -131,6 +137,8 @@ const Navbar = () => {
                 </a> */}
                 <a
                   className={`nav-link ps-0 ps-md-2 mb-2 mb-lg-0 ${navLinkClass}`}
+                  href="#galleria"
+                  title="Vai alla galleria"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToId('galleria');
@@ -141,6 +149,7 @@ const Navbar = () => {
                 </a>
                 <a
                   className="btn btn-hero d-lg-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 ms-2 rounded"
+                  href="#prenotazioni"
                   title="Prenota Ora"
                   onClick={(e) => {
                     e.preventDefault();

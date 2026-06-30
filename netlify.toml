@@ -14,4 +14,4 @@
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.iubenda.com https://www.iubenda.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.iubenda.com; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data: https://www.iubenda.com https://cdn.iubenda.com; connect-src 'self' https://www.iubenda.com https://cdn.iubenda.com; frame-src https://www.iubenda.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.iubenda.com https://www.iubenda.com; style-src 'self' 'unsafe-inline' https://cdn.iubenda.com; font-src 'self'; img-src 'self' data: https://www.iubenda.com https://cdn.iubenda.com; connect-src 'self' https://www.iubenda.com https://cdn.iubenda.com; frame-src https://www.iubenda.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"

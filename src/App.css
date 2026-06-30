@@ -17,13 +17,12 @@
 html {
     scrollbar-width: none;
     /* none | auto | thin */
+    overflow-x: hidden;
 }
 
-body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+::selection {
+    background-color: #ff93bc;
+    color: #000;
 }
 
 /*REGOLE BASE*/

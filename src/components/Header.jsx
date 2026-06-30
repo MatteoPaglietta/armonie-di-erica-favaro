@@ -1,20 +1,61 @@
-const Header = () => {
-  return (
-    <header className="header" id="header">
-      <video className="header-video video-sm" autoPlay muted loop playsInline>
-        <source src="/img/video-header-mobile.mp4" type="video/mp4" />
-        Il tuo browser non supporta il video.
-      </video>
+import { useEffect, useState } from 'react';
+import Skeleton from './Skeleton';
 
-      <video className="header-video video-lg" autoPlay muted loop playsInline>
-        <source src="/img/IMG_1830.mp4" type="video/mp4" />
-        Il tuo browser non supporta il video.
-      </video>
+const isDesktopQuery = '(min-width: 992px)';
+
+const Header = () => {
+  const [isDesktop, setIsDesktop] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia(isDesktopQuery).matches
+  );
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia(isDesktopQuery);
+    const handleChange = (e) => {
+      setVideoLoaded(false);
+      setIsDesktop(e.matches);
+    };
+    mql.addEventListener('change', handleChange);
+    return () => mql.removeEventListener('change', handleChange);
+  }, []);
+
+  return (
+    <header className="header" id="home">
+      {!videoLoaded && (
+        <Skeleton style={{ position: 'absolute', inset: 0, borderRadius: 0 }} />
+      )}
+      {isDesktop ? (
+        <video
+          key="lg"
+          className="header-video video-lg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          onLoadedData={() => setVideoLoaded(true)}
+        >
+          <source src="/img/IMG_1830.mp4" type="video/mp4" />
+          Il tuo browser non supporta il video.
+        </video>
+      ) : (
+        <video
+          key="sm"
+          className="header-video video-sm"
+          autoPlay
+          muted
+          loop
+          playsInline
+          onLoadedData={() => setVideoLoaded(true)}
+        >
+          <source src="/img/video-header-mobile.mp4" type="video/mp4" />
+          Il tuo browser non supporta il video.
+        </video>
+      )}
 
       <div className="container">
         <div className="row">
           <div className="overlay"></div>
-          <figure data-aos="fade-down" data-aos-delay="100">
+          <figure>
             <picture>
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 -10 400 45" preserveAspectRatio="xMidYMid meet">
                 <text x="50%" y="75%" textAnchor="middle" fontFamily="Buenard, serif" fontSize="64" fontWeight="700" letterSpacing="4" fill="#ffffff">
@@ -24,9 +65,9 @@ const Header = () => {
             </picture>
           </figure>
 
-          <p className="text-header z-index-1" data-aos="fade-up" data-aos-delay="250">Scopri la bellezza che ti rappresenta</p>
+          <p className="text-header z-index-1">Scopri la bellezza che ti rappresenta</p>
 
-          <div className="z-index-1 text-center mt-2" data-aos="fade-up" data-aos-delay="400">
+          <div className="z-index-1 text-center mt-2">
             <a
               className="btn btn-hero d-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 rounded"
               href="#"
