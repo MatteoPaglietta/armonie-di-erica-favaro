@@ -30,6 +30,10 @@ function Introduction() {
                         </div>
                     </div>
                 </div>
+
+                <p className="text-center text-main-content mt-4 fs-3" data-aos="fade-up">
+                    Da anni nel cuore di Piscina, in via Umberto I, accompagniamo le nostre clienti in un percorso di bellezza su misura: dalla consulenza iniziale alla scelta della tecnica più adatta, fino alla cura quotidiana dei capelli dopo il trattamento.
+                </p>
             </div>
         </section>
     );

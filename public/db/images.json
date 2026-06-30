@@ -2,101 +2,101 @@
     {
         "id": 1,
         "image": "/img/acconciatura1.jpg",
-        "name": "Acconciatura 1"
+        "name": "Raccolto basso intrecciato con accessorio gioiello blu e argento"
     },
     {
         "id": 2,
         "image": "/img/acconciatura16.jpg",
-        "name": "Acconciatura 2"
+        "name": "Trucco occhi rosa champagne glitterato con ciglia voluminose"
     },
     {
         "id": 3,
         "image": "/img/acconciatura4.jpg",
-        "name": "Acconciatura 3"
+        "name": "Capelli lunghi mossi con balayage caramello su base castano scuro"
     },
     {
         "id": 4,
         "image": "/img/acconciatura3.jpg",
-        "name": "Acconciatura 4"
+        "name": "Caschetto corto asimmetrico con balayage rosa antico"
     },
     {
         "id": 5,
         "image": "/img/acconciatura5.jpg",
-        "name": "Acconciatura 5"
+        "name": "Caschetto corto spettinato con balayage biondo platino"
     },
     {
         "id": 6,
         "image": "/img/acconciatura21.jpg",
-        "name": "Galleria 6"
+        "name": "Capelli lunghi mossi castani con riflessi caramello"
     },
     {
         "id": 7,
         "image": "/img/acconciatura18.jpg",
-        "name": "Galleria 7"
+        "name": "Trucco occhi oro rosa scintillante con ciglia finte"
     },
     {
         "id": 8,
         "image": "/img/acconciatura13.jpg",
-        "name": "Galleria 8"
+        "name": "Caschetto liscio e lucido nero corvino"
     },
     {
         "id": 9,
         "image": "/img/acconciatura9.jpg",
-        "name": "Galleria 9"
+        "name": "Pixie cut riccio con colore melanzana acceso"
     },
     {
         "id": 10,
         "image": "/img/acconciatura8.jpg",
-        "name": "Galleria 10"
+        "name": "Raccolto alto romantico biondo con accessori gioiello dorati"
     },
     {
         "id": 11,
         "image": "/img/acconciatura7.jpg",
-        "name": "Galleria 11"
+        "name": "Caschetto mosso biondo con balayage luminoso"
     },
     {
         "id": 12,
         "image": "/img/acconciatura22.jpg",
-        "name": "Galleria 12"
+        "name": "Tre clienti con acconciature diverse davanti al salone Armonie di Erica Favaro"
     },
     {
         "id": 13,
         "image": "/img/acconciatura6.jpg",
-        "name": "Galleria 13"
+        "name": "Capelli mossi color rame acceso"
     },
     {
         "id": 14,
         "image": "/img/acconciatura2.jpg",
-        "name": "Galleria 14"
+        "name": "Raccolto riccio con strass per cerimonia"
     },
     {
         "id": 15,
         "image": "/img/acconciatura11.jpg",
-        "name": "Galleria 15"
+        "name": "Capelli mossi con balayage ramato realizzati nel salone"
     },
     {
         "id": 16,
         "image": "/img/acconciatura10.jpg",
-        "name": "Galleria 16"
+        "name": "Capelli mossi color rosa corallo"
     },
     {
         "id": 17,
         "image": "/img/acconciatura25.jpg",
-        "name": "Galleria 17"
+        "name": "Trucco occhi argento con smokey eye drammatico"
     },
     {
         "id": 18,
         "image": "/img/acconciatura23.jpg",
-        "name": "Galleria 18"
+        "name": "Trucco occhi pesca con finish glitterato"
     },
     {
         "id": 19,
         "image": "/img/acconciatura15.jpg",
-        "name": "Galleria 19"
+        "name": "Caschetto mosso con balayage ramato su base scura"
     },
     {
         "id": 20,
         "image": "/img/acconciatura24.jpg",
-        "name": "Galleria 20"
+        "name": "Trucco occhi malva con eyeliner effetto smokey"
     }
 ]

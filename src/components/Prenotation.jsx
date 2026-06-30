@@ -4,10 +4,14 @@ function Prenotation() {
             <div className="container">
                 <div className="row mx-prenotazione">
                     <div className="col-12 col-md-6 d-flex align-items-center justify-content-center" data-aos="fade-right">
-                        <img src="/img/immagine-sezione-prenotazione.jpg" alt="Salone Armonie di Erica" className="rounded" style={{ height: "300px", width: "100%", maxWidth: "100%", objectFit: "cover" }} />
+                        <picture>
+                            <source srcSet="/img/immagine-sezione-prenotazione.avif" type="image/avif" />
+                            <source srcSet="/img/immagine-sezione-prenotazione.webp" type="image/webp" />
+                            <img src="/img/immagine-sezione-prenotazione.jpg" alt="Salone Armonie di Erica" className="rounded" width="1000" height="750" loading="lazy" decoding="async" style={{ height: "300px", width: "100%", maxWidth: "100%", objectFit: "cover" }} />
+                        </picture>
                     </div>
                     <div className="col-12 col-md-6 text-center pt-4 pt-md-0 d-flex flex-column justify-content-center align-items-center" data-aos="fade-left">
-                        <h3 className="title-text">Il tuo nuovo look ti aspetta! Prenota ora</h3>
+                        <h2 className="title-text">Il tuo nuovo look ti aspetta! Prenota ora</h2>
                         <p className="mt-3"> Vieni a trovarci a Piscina in via Umberto I n° 7. Se invece preferisci scriverci, clicca qui sotto per chattare con noi, richiedere disponibilità o personalizzare il tuo trattamento in tempo reale.
                             La tua bellezza merita una consulenza dedicata e noi siamo disponibili per aiutarti.</p>
                     </div>

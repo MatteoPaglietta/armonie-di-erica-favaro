@@ -59,7 +59,14 @@ const PhotoGallery = () => {
 
   return (
     <>
-      <section className="photo-carousel mt-5" id="galleria" data-aos="fade-up">
+      <section className="mt-5" id="galleria">
+        <div className="container">
+          <h2 className="text-center title-text" data-aos="fade-up">La Nostra Galleria</h2>
+          <p className="text-center text-main-content mt-3 mb-4 fs-3" data-aos="fade-up" data-aos-delay="100">
+            Acconciature, schiariture e styling realizzati nel nostro salone di Piscina: alcuni dei lavori di cui andiamo più fiere.
+          </p>
+        </div>
+      <div className="photo-carousel" data-aos="fade-up">
         {loading && (
             <div className="photo-grid" style={{ display: 'grid', gridAutoFlow: 'dense', gridTemplateColumns: 'repeat(10, 150px)', gridTemplateRows: 'repeat(3, 150px)', gap: '1rem' }}>
                 {Array.from({ length: 20 }).map((_, index) => (
@@ -78,20 +85,28 @@ const PhotoGallery = () => {
                             if([4, 6, 14].includes(i)) style.gridRow = 'span 2';
 
                             return (
-                                <img
-                                    key={image.id}
-                                    src={image.image}
-                                    alt={image.name}
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '10px', ...style }}
-                                    onClick={() => setSelectedImg(image.image)}
-                                    className="cursor-pointer"
-                                />
+                                <picture key={image.id} style={style}>
+                                    <source srcSet={image.image.replace('.jpg', '.avif')} type="image/avif" />
+                                    <source srcSet={image.image.replace('.jpg', '.webp')} type="image/webp" />
+                                    <img
+                                        src={image.image}
+                                        alt={image.name}
+                                        width="450"
+                                        height="450"
+                                        loading="lazy"
+                                        decoding="async"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '10px' }}
+                                        onClick={() => setSelectedImg(image.image)}
+                                        className="cursor-pointer"
+                                    />
+                                </picture>
                             );
                         })}
                     </div>
                 ))}
             </div>
         )}
+      </div>
       </section>
 
       {selectedImg && (

@@ -2,6 +2,12 @@ function Packages() {
     return (
         <section className="pacchetti-section" id="pacchetti">
             <div className="container">
+                <div className="d-none d-md-block">
+                    <h2 className="text-center title-text pt-5" data-aos="fade-up">I Nostri Pacchetti</h2>
+                    <p className="text-center text-main-content mt-3 fs-3" data-aos="fade-up" data-aos-delay="100">
+                        Dalle schiariture naturali alla cura quotidiana dei capelli, fino ai look per i tuoi giorni più speciali: ogni pacchetto nasce da un consulto personalizzato e si adatta alla tua base, al tuo stile e alle tue esigenze.
+                    </p>
+                </div>
                 <div className="row gy-4 pacchetti">
                     <div className="pacchetto-grid mt-5" data-aos="fade-up">
                         <div className="text-and-button-grid">
@@ -10,7 +16,11 @@ function Packages() {
                             <div className="text-center mt-3 mb-3 mb-md-0"><a className="btn btn-hero" href="https://wa.me/3925372152" target="_blank" rel="noopener noreferrer">Scopri di più</a></div>
                         </div>
                         <div className="immagine-grid">
-                            <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-sposa.jpg" alt="Pacchetto Sposa" />
+                            <picture>
+                                <source srcSet="/img/immagine-pacchetto-sposa.avif" type="image/avif" />
+                                <source srcSet="/img/immagine-pacchetto-sposa.webp" type="image/webp" />
+                                <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-sposa.jpg" alt="Pacchetto Sposa" width="1200" height="800" loading="lazy" decoding="async" />
+                            </picture>
                         </div>
                     </div>
 
@@ -21,7 +31,11 @@ function Packages() {
                             <div className="text-center mt-3 mb-3 mb-md-0"><a className="btn btn-hero" href="https://wa.me/3925372152" target="_blank" rel="noopener noreferrer">Scopri di più</a></div>
                         </div>
                         <div className="immagine-grid item-2">
-                            <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-schiariture.jpg" alt="Pacchetto Schiariture" />
+                            <picture>
+                                <source srcSet="/img/immagine-pacchetto-schiariture.avif" type="image/avif" />
+                                <source srcSet="/img/immagine-pacchetto-schiariture.webp" type="image/webp" />
+                                <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-schiariture.jpg" alt="Pacchetto Schiariture" width="1200" height="1618" loading="lazy" decoding="async" />
+                            </picture>
                         </div>
                     </div>
 
@@ -34,7 +48,11 @@ function Packages() {
                             </div>
                         </div>
                         <div className="immagine-grid">
-                            <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-invitata.jpg" alt="Pacchetto Cerimonia" />
+                            <picture>
+                                <source srcSet="/img/immagine-pacchetto-invitata.avif" type="image/avif" />
+                                <source srcSet="/img/immagine-pacchetto-invitata.webp" type="image/webp" />
+                                <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-invitata.jpg" alt="Pacchetto Cerimonia" width="960" height="1280" loading="lazy" decoding="async" />
+                            </picture>
                         </div>
                     </div>
 
@@ -47,7 +65,11 @@ function Packages() {
                             </div>
                         </div>
                         <div className="immagine-grid item-2">
-                            <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-stiratura.jpg" alt="Pacchetto Stiratura alla Cheratina" />
+                            <picture>
+                                <source srcSet="/img/immagine-pacchetto-stiratura.avif" type="image/avif" />
+                                <source srcSet="/img/immagine-pacchetto-stiratura.webp" type="image/webp" />
+                                <img className="img-pacchetto img-fluid rounded" src="/img/immagine-pacchetto-stiratura.jpg" alt="Pacchetto Stiratura alla Cheratina" width="960" height="962" loading="lazy" decoding="async" />
+                            </picture>
                         </div>
                     </div>
                 </div>
