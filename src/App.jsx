@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 // import Catalog from './pages/Catalog';
 // import ProductDetail from './pages/ProductDetail';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -41,6 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* <Route path="/catalogo-prodotti" element={<Catalog />} /> */}
           {/* <Route path="/catalogo-prodotti/:id" element={<ProductDetail />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
 

@@ -985,6 +985,59 @@ prezzo e link
     }
 }
 
+/*PAGINA 404*/
+.not-found-section {
+    min-height: calc(100vh - 60px);
+    padding: 140px 1rem 90px;
+}
+
+.not-found-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/img/logo.png');
+    background-repeat: no-repeat;
+    background-position: center 65%;
+    background-size: min(950px, 150%) auto;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.not-found-number {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: clamp(6rem, 24vw, 13rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #e49cb6, #a0254e, #ff93bc, #830932, #eea7c1);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: not-found-gradient-shift 6s ease-in-out infinite;
+}
+
+@keyframes not-found-gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .not-found-number {
+        animation: none;
+    }
+}
+
 /*DETTAGLIO PRODOTTI*/
 /*
 .immagine-dettaglio {
