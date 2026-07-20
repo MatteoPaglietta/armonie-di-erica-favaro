@@ -2,7 +2,7 @@
 
 Sito vetrina per **Armonie di Erica Favaro**, salone di parrucchieria a Piscina (TO). Single page application in React con sezioni per pacchetti/trattamenti, galleria fotografica e prenotazione via WhatsApp, fortemente ottimizzata per SEO (dati strutturati, prerendering, IndexNow).
 
-- **Sito live**: https://armonie-di-erica-favaro.it/
+- **Sito live**: https://www.armonie-di-erica-favaro.it/
 - **Indirizzo**: Via Umberto I 7, Piscina (TO)
 - **Prenotazioni**: via WhatsApp ([wa.me/3925372152](https://wa.me/3925372152))
 

@@ -14,11 +14,11 @@ const Footer = () => {
                 <i className="bi bi-whatsapp"></i>
                 <span className="visually-hidden">Whatsapp</span>
               </a>
-              <a href="https://instagram.com/armonie_di_erica_" target="_blank" rel="noopener noreferrer" className="text-light fs-5" title="Seguici su Instagram">
+              <a href="https://www.instagram.com/armonie_di_erica_favaro/" target="_blank" rel="noopener noreferrer" className="text-light fs-5" title="Seguici su Instagram">
                 <i className="bi bi-instagram"></i>
                 <span className="visually-hidden">Instagram</span>
               </a>
-              <a href="https://facebook.com/share/19LtJ4aRER/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-light fs-5" title="Seguici su Facebook">
+              <a href="https://www.facebook.com/espertinelleschiariture/" target="_blank" rel="noopener noreferrer" className="text-light fs-5" title="Seguici su Facebook">
                 <i className="bi bi-facebook"></i>
                 <span className="visually-hidden">Facebook</span>
               </a>

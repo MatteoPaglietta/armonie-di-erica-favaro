@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://armonie-di-erica-favaro.it/sitemap.xml
+Sitemap: https://www.armonie-di-erica-favaro.it/sitemap.xml
