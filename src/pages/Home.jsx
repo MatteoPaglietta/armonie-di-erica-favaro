@@ -4,6 +4,7 @@ import PhotoGallery from '../components/PhotoGallery';
 import Introduction from '../components/Introduction';
 import Packages from '../components/Packages';
 import Team from '../components/Team';
+import Reviews from '../components/Reviews';
 import Prenotation from '../components/Prenotation';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -16,6 +17,7 @@ const Home = () => {
             {/* <ProductCarousel /> */}
             <PhotoGallery />
             {/* <Team /> */}
+            <Reviews />
             <Prenotation />
             <ScrollToTop />
         </main>
