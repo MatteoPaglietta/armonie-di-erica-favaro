@@ -148,18 +148,6 @@ const Navbar = () => {
                   Galleria
                 </a>
                 <a
-                  className={`nav-link ps-0 ps-md-2 mb-2 mb-lg-0 ${navLinkClass}`}
-                  href="#recensioni"
-                  title="Vai alle recensioni"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToId('recensioni');
-                    closeMenu();
-                  }}
-                >
-                  Recensioni
-                </a>
-                <a
                   className="btn btn-hero d-lg-inline-flex align-items-center justify-content-center gap-2 text-nowrap fw-semibold fs-6 px-4 py-2 ms-2 rounded"
                   href="#prenotazioni"
                   title="Prenota Ora"

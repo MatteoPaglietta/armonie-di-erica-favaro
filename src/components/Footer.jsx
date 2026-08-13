@@ -1,6 +1,14 @@
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToId = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-dark text-light pt-5 pb-4 mt-auto" id="footer">
       <div className="container">
@@ -28,11 +36,59 @@ const Footer = () => {
           <div className="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <h4 className="h6 text-uppercase fw-bold mb-3">Link utili</h4>
             <ul className="list-unstyled mb-0">
-              <li className="mb-2"><a href="/#homepage" title="Vai alla home" className="text-decoration-none text-light">Home</a></li>
-              <li className="mb-2"><a href="/#pacchetti" title="Vai ai pacchetti" className="text-decoration-none text-light">Pacchetti</a></li>
+              <li className="mb-2">
+                <a
+                  href="#home"
+                  title="Vai alla home"
+                  className="text-decoration-none text-light"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToTop();
+                  }}
+                >
+                  Home
+                </a>
+              </li>
+              <li className="mb-2">
+                <a
+                  href="#pacchetti"
+                  title="Vai ai pacchetti"
+                  className="text-decoration-none text-light"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToId('pacchetti');
+                  }}
+                >
+                  Pacchetti
+                </a>
+              </li>
               {/* <li className="mb-2"><a href="/#prodotti" className="text-decoration-none text-light">Prodotti</a></li> */}
-              <li className="mb-2"><a href="/#galleria" title="Vai alla galleria" className="text-decoration-none text-light">Galleria</a></li>
-              <li><a href="/#prenotazioni" title="Vai alle prenotazioni" className="text-decoration-none text-light">Prenotazioni</a></li>
+              <li className="mb-2">
+                <a
+                  href="#galleria"
+                  title="Vai alla galleria"
+                  className="text-decoration-none text-light"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToId('galleria');
+                  }}
+                >
+                  Galleria
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#prenotazioni"
+                  title="Vai alle prenotazioni"
+                  className="text-decoration-none text-light"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToId('prenotazioni');
+                  }}
+                >
+                  Prenotazioni
+                </a>
+              </li>
             </ul>
           </div>
 
